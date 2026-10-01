@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলাদেশ সাইন্স সেমিনার সিম্পোজিয়াম</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-atom"></i>
+                <span>BSSS</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">হোম</a></li>
+                <li><a href="#about" class="nav-link">আমাদের সম্পর্কে</a></li>
+                <li><a href="#officials" class="nav-link">কর্মকর্তাবৃন্দ</a></li>
+                <li><a href="#gallery" class="nav-link">গ্যালারি</a></li>
+                <li><a href="#publications" class="nav-link">প্রকাশনা</a></li>
+                <li><a href="#notices" class="nav-link">নোটিশ</a></li>
+                <li><a href="#membership" class="nav-link">সদস্যপদ</a></li>
+            </ul>
+            <div class="nav-auth" id="navAuth">
+                <button class="btn btn-outline" onclick="openModal('loginModal')">লগইন</button>
+                <button class="btn btn-primary" onclick="openModal('signupModal')">সাইন আপ</button>
+            </div>
+            <div class="user-menu" id="userMenu" style="display:none;">
+                <span id="userName"></span>
+                <button class="btn btn-outline" onclick="logout()">লগআউট</button>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">বাংলাদেশ সাইন্স সেমিনার সিম্পোজিয়াম</h1>
+            <p class="hero-subtitle">বিজ্ঞানের আলোয় আলোকিত বাংলাদেশ গড়ার প্রত্যয়</p>
+            <p class="hero-desc">আমরা বিজ্ঞান শিক্ষা, গবেষণা এবং উদ্ভাবনের মাধ্যমে তরুণ প্রজন্মকে অনুপ্রাণিত করি। আমাদের লক্ষ্য একটি বিজ্ঞানমনস্ক জাতি গঠন।</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary btn-lg">আরও জানুন</a>
+                <a href="#membership" class="btn btn-outline-light btn-lg">সদস্য হোন</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">আমাদের সম্পর্কে</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>আমাদের লক্ষ্য</h3>
+                    <p>বাংলাদেশে বিজ্ঞান শিক্ষা ও গবেষণার মান উন্নয়ন এবং তরুণ বিজ্ঞানীদের উৎসাহিত করা। বিজ্ঞানভিত্তিক সমাজ গঠনে অবদান রাখা।</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-eye"></i></div>
+                    <h3>আমাদের দৃষ্টিভঙ্গি</h3>
+                    <p>একটি জ্ঞানভিত্তিক ও উদ্ভাবনী বাংলাদেশ গড়ে তোলা যেখানে বিজ্ঞান ও প্রযুক্তি সকল স্তরের মানুষের জীবনমান উন্নয়নে ভূমিকা রাখে।</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>আমাদের কার্যক্রম</h3>
+                    <p>সেমিনার, সিম্পোজিয়াম, ওয়ার্কশপ, গবেষণা প্রকাশনা এবং বিজ্ঞান মেলা আয়োজনের মাধ্যমে বিজ্ঞান সচেতনতা বৃদ্ধি।</p>
+                </div>
+            </div>
+            <div class="about-extra">
+                <p>বাংলাদেশ সাইন্স সেমিনার সিম্পোজিয়াম (BSSS) একটি অলাভজনক ফাউন্ডেশন যা ২০২০ সালে প্রতিষ্ঠিত হয়। আমাদের প্রেসিডেন্ট তারেক মনোয়ার সানিয়াত স্যারের নেতৃত্বে আমরা দেশব্যাপী বিজ্ঞান শিক্ষার প্রসারে কাজ করে যাচ্ছি।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Officials Section -->
+    <section id="officials" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">কর্মকর্তাবৃন্দ</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">আমাদের নেতৃত্বদানকারী ব্যক্তিবর্গ</p>
+            </div>
+            
+            <!-- President Card -->
+            <div class="president-card">
+                <div class="president-img-wrap">
+                    <img src="president.png" alt="তারেক মনোয়ার সানিয়াত" class="president-img">
+                </div>
+                <div class="president-info">
+                    <span class="badge">প্রেসিডেন্ট</span>
+                    <h3>তারেক মনোয়ার সানিয়াত</h3>
+                    <p class="president-title">বাংলাদেশ সাইন্স সেমিনার সিম্পোজিয়াম</p>
+                    <p class="president-bio">বিজ্ঞান শিক্ষা ও গবেষণার প্রসারে নিবেদিতপ্রাণ একজন নেতা। তাঁর দূরদর্শী নেতৃত্বে BSSS দেশব্যাপী বিজ্ঞান সচেতনতা বৃদ্ধিতে গুরুত্বপূর্ণ ভূমিকা পালন করছে। তিনি বিশ্বাস করেন যে বিজ্ঞানই জাতির উন্নয়নের মূল চাবিকাঠি।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Officials -->
+            <div class="officials-grid" id="officialsGrid">
+                <!-- Dynamically loaded -->
+            </div>
+
+            <!-- Admin Add Official (only visible when logged in as admin) -->
+            <div class="admin-panel" id="adminOfficials" style="display:none;">
+                <h3><i class="fas fa-user-plus"></i> নতুন কর্মকর্তা যোগ করুন</h3>
+                <form id="addOfficialForm" class="admin-form">
+                    <div class="form-row">
+                        <input type="text" id="offName" placeholder="নাম" required>
+                        <input type="text" id="offPosition" placeholder="পদবি" required>
+                    </div>
+                    <textarea id="offBio" placeholder="সংক্ষিপ্ত পরিচিতি" rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary">যোগ করুন</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">গ্যালারি</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">আমাদের স্মরণীয় মুহূর্তগুলো</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-microscope"></i>
+                        <p>জাতীয় বিজ্ঞান সেমিনার ২০২৪</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>জাতীয় বিজ্ঞান সেমিনার ২০২৪</h4>
+                        <p>ঢাকা বিশ্ববিদ্যালয়ে অনুষ্ঠিত বার্ষিক সেমিনার</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>তরুণ বিজ্ঞানী সম্মেলন</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>তরুণ বিজ্ঞানী সম্মেলন</h4>
+                        <p>দেশের বিভিন্ন প্রান্তের তরুণ গবেষকদের মিলনমেলা</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-flask"></i>
+                        <p>বিজ্ঞান মেলা ২০২৩</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>বিজ্ঞান মেলা ২০২৩</h4>
+                        <p>স্কুল-কলেজ শিক্ষার্থীদের উদ্ভাবনী প্রকল্প প্রদর্শনী</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <p>ওয়ার্কশপ সিরিজ</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>গবেষণা পদ্ধতি ওয়ার্কশপ</h4>
+                        <p>বিশ্ববিদ্যালয় শিক্ষার্থীদের জন্য বিশেষ প্রশিক্ষণ</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-award"></i>
+                        <p>পুরস্কার বিতরণী</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>সেরা গবেষণা পুরস্কার</h4>
+                        <p>অসাধারণ গবেষণা অবদানের স্বীকৃতি</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-globe-asia"></i>
+                        <p>আন্তর্জাতিক সহযোগিতা</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h4>আন্তর্জাতিক সিম্পোজিয়াম</h4>
+                        <p>বিদেশি বিজ্ঞানীদের সাথে জ্ঞান বিনিময়</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">প্রকাশনা</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">আমাদের গবেষণা ও জ্ঞানভিত্তিক প্রকাশনাসমূহ</p>
+            </div>
+            <div class="publications-grid" id="publicationsGrid">
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-year">২০২৪</span>
+                        <h3>বাংলাদেশে বিজ্ঞান শিক্ষার বর্তমান অবস্থা ও ভবিষ্যৎ</h3>
+                        <p>এই গবেষণাপত্রে বাংলাদেশের বিজ্ঞান শিক্ষার চ্যালেঞ্জ এবং সম্ভাবনা নিয়ে বিস্তারিত আলোচনা করা হয়েছে।</p>
+                        <a href="#" class="pub-link">পড়ুন <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-journal-whills"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-year">২০২৩</span>
+                        <h3>তরুণ গবেষকদের জন্য গাইডলাইন</h3>
+                        <p>নতুন গবেষকদের গবেষণা প্রস্তাবনা লেখা, ডেটা বিশ্লেষণ এবং প্রকাশনা সম্পর্কে ব্যবহারিক নির্দেশিকা।</p>
+                        <a href="#" class="pub-link">পড়ুন <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-year">২০২৩</span>
+                        <h3>জলবায়ু পরিবর্তন ও বাংলাদেশ: বিজ্ঞানভিত্তিক সমাধান</h3>
+                        <p>জলবায়ু সংকট মোকাবিলায় স্থানীয় উদ্ভাবন এবং বিজ্ঞানভিত্তিক নীতিমালার প্রস্তাবনা।</p>
+                        <a href="#" class="pub-link">পড়ুন <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="pub-card">
+                    <div class="pub-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="pub-content">
+                        <span class="pub-year">২০২২</span>
+                        <h3>BSSS বার্ষিক রিপোর্ট ২০২২</h3>
+                        <p>ফাউন্ডেশনের বার্ষিক কার্যক্রম, অর্জন এবং আর্থিক প্রতিবেদনের সারসংক্ষেপ।</p>
+                        <a href="#" class="pub-link">পড়ুন <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notices Section -->
+    <section id="notices" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">নোটিশ বোর্ড</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="notices-list" id="noticesList">
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <span class="day">১৫</span>
+                        <span class="month">সেপ্ট</span>
+                    </div>
+                    <div class="notice-content">
+                        <h4>জাতীয় বিজ্ঞান সেমিনার ২০২৫ - নিবন্ধন শুরু</h4>
+                        <p>আগামী বছরের জাতীয় বিজ্ঞান সেমিনারের জন্য নিবন্ধন প্রক্রিয়া শুরু হয়েছে। আগ্রহী গবেষক ও শিক্ষার্থীরা আবেদন করতে পারেন।</p>
+                        <span class="notice-tag">গুরুত্বপূর্ণ</span>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <span class="day">০১</span>
+                        <span class="month">সেপ্ট</span>
+                    </div>
+                    <div class="notice-content">
+                        <h4>নতুন সদস্য নিয়োগ বিজ্ঞপ্তি</h4>
+                        <p>BSSS-এর বিভিন্ন কমিটিতে নতুন সদস্য নেওয়া হচ্ছে। যোগ্য প্রার্থীরা আবেদন করুন।</p>
+                        <span class="notice-tag">সদস্যপদ</span>
+                    </div>
+                </div>
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <span class="day">২০</span>
+                        <span class="month">আগস্ট</span>
+                    </div>
+                    <div class="notice-content">
+                        <h4>গবেষণা অনুদান আবেদনের সময়সীমা বাড়ানো হয়েছে</h4>
+                        <p>তরুণ গবেষক অনুদান কর্মসূচির আবেদনের শেষ তারিখ ৩০ সেপ্টেম্বর পর্যন্ত বাড়ানো হয়েছে।</p>
+                        <span class="notice-tag">অনুদান</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Add Notice -->
+            <div class="admin-panel" id="adminNotices" style="display:none;">
+                <h3><i class="fas fa-bullhorn"></i> নতুন নোটিশ যোগ করুন</h3>
+                <form id="addNoticeForm" class="admin-form">
+                    <input type="text" id="noticeTitle" placeholder="নোটিশের শিরোনাম" required>
+                    <textarea id="noticeBody" placeholder="নোটিশের বিস্তারিত" rows="3" required></textarea>
+                    <input type="text" id="noticeTag" placeholder="ট্যাগ (যেমন: গুরুত্বপূর্ণ)">
+                    <button type="submit" class="btn btn-primary">প্রকাশ করুন</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">সদস্যপদ</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">আমাদের সাথে যুক্ত হোন এবং বিজ্ঞানের প্রসারে অবদান রাখুন</p>
+            </div>
+            <div class="membership-grid">
+                <div class="member-card">
+                    <div class="member-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>সাধারণ সদস্য</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> সেমিনারে অংশগ্রহণ</li>
+                        <li><i class="fas fa-check"></i> প্রকাশনা অ্যাক্সেস</li>
+                        <li><i class="fas fa-check"></i> নেটওয়ার্কিং সুবিধা</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="openModal('signupModal')">যোগ দিন</button>
+                </div>
+                <div class="member-card featured">
+                    <div class="member-badge">জনপ্রিয়</div>
+                    <div class="member-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>গবেষক সদস্য</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> সব সাধারণ সুবিধা</li>
+                        <li><i class="fas fa-check"></i> গবেষণা অনুদান আবেদন</li>
+                        <li><i class="fas fa-check"></i> পেপার প্রকাশের সুযোগ</li>
+                        <li><i class="fas fa-check"></i> মেন্টরশিপ</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openModal('signupModal')">যোগ দিন</button>
+                </div>
+                <div class="member-card">
+                    <div class="member-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>সহযোগী সদস্য</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> প্রতিষ্ঠানিক অংশীদারিত্ব</li>
+                        <li><i class="fas fa-check"></i> ইভেন্ট স্পনসরশিপ</li>
+                        <li><i class="fas fa-check"></i> ব্র্যান্ডিং সুবিধা</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="openModal('signupModal')">যোগ দিন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-atom"></i> BSSS</h3>
+                    <p>বাংলাদেশ সাইন্স সেমিনার সিম্পোজিয়াম — বিজ্ঞানের আলোয় উজ্জ্বল ভবিষ্যৎ গড়ার অঙ্গীকার।</p>
+                </div>
+                <div class="footer-col">
+                    <h4>দ্রুত লিংক</h4>
+                    <ul>
+                        <li><a href="#home">হোম</a></li>
+                        <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#officials">কর্মকর্তাবৃন্দ</a></li>
+                        <li><a href="#gallery">গ্যালারি</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>যোগাযোগ</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@bsss.org.bd</li>
+                        <li><i class="fas fa-phone"></i> +৮৮০ ১৭XX-XXXXXX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ঢাকা, বাংলাদেশ</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>আমাদের অনুসরণ করুন</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; ২০২৪ বাংলাদেশ সাইন্স সেমিনার সিম্পোজিয়াম। সর্বস্বত্ব সংরক্ষিত।</p>
+                <p>প্রেসিডেন্ট: তারেক মনোয়ার সানিয়াত</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            <h2>লগইন</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>ইমেইল</label>
+                    <input type="email" id="loginEmail" required placeholder="আপনার ইমেইল">
+                </div>
+                <div class="form-group">
+                    <label>পাসওয়ার্ড</label>
+                    <input type="password" id="loginPassword" required placeholder="পাসওয়ার্ড">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">লগইন করুন</button>
+            </form>
+            <p class="modal-switch">অ্যাকাউন্ট নেই? <a href="#" onclick="switchModal('loginModal','signupModal')">সাইন আপ করুন</a></p>
+            <p class="admin-hint">অ্যাডমিন: admin@bsss.org / admin123</p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('signupModal')">&times;</button>
+            <h2>সাইন আপ</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label>পূর্ণ নাম</label>
+                    <input type="text" id="signupName" required placeholder="আপনার নাম">
+                </div>
+                <div class="form-group">
+                    <label>ইমেইল</label>
+                    <input type="email" id="signupEmail" required placeholder="আপনার ইমেইল">
+                </div>
+                <div class="form-group">
+                    <label>পাসওয়ার্ড</label>
+                    <input type="password" id="signupPassword" required placeholder="পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)" minlength="6">
+                </div>
+                <div class="form-group">
+                    <label>সদস্যের ধরন</label>
+                    <select id="signupType">
+                        <option value="general">সাধারণ সদস্য</option>
+                        <option value="researcher">গবেষক সদস্য</option>
+                        <option value="associate">সহযোগী সদস্য</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">নিবন্ধন করুন</button>
+            </form>
+            <p class="modal-switch">ইতিমধ্যে অ্যাকাউন্ট আছে? <a href="#" onclick="switchModal('signupModal','loginModal')">লগইন করুন</a></p>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
